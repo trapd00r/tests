@@ -5,7 +5,8 @@ use warnings FATAL => 'all';
 use WWW::Mechanize;
 
 my $m = WWW::Mechanize->new(
-  agent => 'https://github.com/trapd00r/tests/bin/www-mechanize-handler.pl',
+  agent =>
+  'https://github.com/trapd00r/tests/blob/master/examples/www-mechanize-handler.pl',
 );
 
 $m->add_handler("request_send", sub { shift->dump; return });
